@@ -8,16 +8,9 @@ class GeoTrellisAssignment extends FunSuite with ShouldMatchers {
 
   test("isArraySorted") {
     
-    // random number generator
-    val prng = new Random()
-
     // unsorted array
-    val unsortedArray = new Array[Int](100)
+    val unsortedArray = Array.fill(100)(Random.nextInt)
         
-    for (i <- 0 until 100) {
-      unsortedArray(i) = prng.nextInt
-    }
-
     // sort array
     val sortedArray = unsortedArray.sorted
 
